@@ -1,5 +1,4 @@
-/* Add your CSS here */
-/* General Reset */
+/* ========== General Reset ========== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,76 +12,40 @@ body {
   line-height: 1.6;
 }
 
-/* Hero / Header Section */
+/* ========== Hero Section ========== */
 header {
   background: #0071c5; /* Intel Blue */
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Fullscreen */
+}
+
+header div {
+  max-width: 600px;
 }
 
 header img {
-  width: 100px;
-  margin-bottom: 1rem;
+  width: 120px;
+  margin-bottom: 1.5rem;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1.1rem;
 }
 
-/* Timeline Section */
-section {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1.5rem;
-  padding: 2rem;
-  margin: 1rem 0;
-}
-
-section > div {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  flex: 0 0 300px;
-  scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section > div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-section img {
-  width: 100%;
-  height: auto;
-  margin: 1rem 0;
-  border-radius: 6px;
-}
-
-h2 {
-  font-size: 1.2rem;
-  color: #0071c5;
-}
-
-h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  font-size: 0.95rem;
-}
-/* Base Styling */
+/* ========== Timeline Section ========== */
 section {
   display: flex;
   overflow-x: auto;
@@ -133,18 +96,7 @@ section p {
   color: #555;
 }
 
-/* Responsive stacking */
-@media (max-width: 768px) {
-  section {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  section > div {
-    width: 100%;
-  }
-}
-/* Note Below Timeline */
+/* ========== Footer / Scroll Note ========== */
 body > p:last-of-type {
   text-align: center;
   font-style: italic;
@@ -152,7 +104,7 @@ body > p:last-of-type {
   color: #555;
 }
 
-/* Responsive for Smaller Screens */
+/* ========== Responsive Design ========== */
 @media (max-width: 768px) {
   section {
     flex-direction: column;
@@ -161,7 +113,14 @@ body > p:last-of-type {
   }
 
   section > div {
-    flex: 1 1 auto;
     width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
   }
 }
