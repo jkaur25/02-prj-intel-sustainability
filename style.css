@@ -1,1 +1,106 @@
 /* Add your CSS here */
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero / Header Section */
+header {
+  background: #0071c5; /* Intel Blue */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Timeline Section */
+section {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+section > div {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #0071c5;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+/* Note Below Timeline */
+body > p:last-of-type {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+
+  section > div {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
